@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+ height: 100%;
+ margin: 0;
+
+ font-family: system-ui;
+}
+
+body {
+ display: grid;
+ grid-template-rows: 1fr;
+ grid-template-columns: 1fr 1fr;
+}
+
+#main {
+  display: flex;
+  position: relative;
+  border: thin solid black;
+}
+
+#root{
+ height: 100%;
+}
+
+#react-canvas {
+  height: 100%;
+  border: thin solid black;
+  display: flex;
+  overflow: hidden;
+}
+
+#morph-container{
+  border-right: thin solid;
+}
+
+#child-container{
+ position: relative;
+}
+
+#react-canvas .draggableShape{
+ top: 0;
+ left: 0;
+}
+
+#react-canvas h3, #main h3{
+ margin-top: 0;
+ margin-left: auto;
+ padding: 5px;
+}
+
+#canvas{
+ 
+}
+
+#add {
+  background: black;
+  color: white;
+  font-size:medium;
+  border: none;
+}
+
+#add:active {
+  color: black;
+  background:white;
+  border-top: thin solid black;
+  border-right: thin solid black;
+}
+
+#morph-container{
+  display: flex;
+  flex-direction:column;
+  width: 100px;
+}
+
+#signature{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+
+ font-size:small;
+ cursor: pointer;
+}
+
+#signature a{
+ color: black;
+}
+
+#signature a:visited{
+ color: black;
+}
+
+#text {
+ padding-left: 5px;
+}
+
+#shape, #color, #size {
+  border: solid thin black;
+  height: 100px;
+  width: 100px;
+  
+}
+
+
+
+#draggable {
+ position: absolute;
+}
+
+.draggableShape {
+ position: absolute;
+ height: 50px;
+ width: 50px;
+ background: pink;
+}
+
+.color {
+ background: yellow;
+}
+
+.shape {
+ border-radius: 200px;
+}
+
+.size{
+ height: 150px;
+ width: 150px;
+}
+
+@keyframes shape{
+  from {
+    border-radius: 200px;
+    transform: scale(0.95);
+    background: #f0f0f0
+  }
+  to {
+    border-radius: 0px;
+    background: #f0f0f0;
+  }
+}
+
+@keyframes color{
+  from {
+    background: #fedbe1;
+  }
+  to {
+    background: #ffff6b;
+  }
+}
+
+@keyframes size{
+  from {
+    transform:scale(1)
+  }
+  to {
+   transform:scale(0.7)
+  }
+}
+
