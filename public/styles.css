@@ -1,161 +1,68 @@
+@font-face{
+  font-family: "ShadowHill";
+  src: url("ShadowHill-Regular.otf");
+}
+
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
- height: 100%;
- margin: 0;
-
- font-family: system-ui;
-}
-
-body {
- display: grid;
- grid-template-rows: 1fr;
- grid-template-columns: 1fr 1fr;
-}
-
-#main {
-  display: flex;
-  position: relative;
-  border: thin solid black;
-}
-
-#root{
- height: 100%;
-}
-
-#react-canvas {
   height: 100%;
-  border: thin solid black;
-  display: flex;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: ShadowHill;
+
+  font-size: 2em;
 }
 
-#morph-container{
-  border-right: thin solid;
+/* contact page */
+#contact-page {      
+  text-align: center;
+  font-family: arial;
+  font-variant: small-caps;
 }
 
-#child-container{
- position: relative;
-}
-
-#react-canvas .draggableShape{
- top: 0;
- left: 0;
-}
-
-#react-canvas h3, #main h3{
- margin-top: 0;
- margin-left: auto;
- padding: 5px;
-}
-
-#canvas{
- 
-}
-
-#add {
-  background: black;
-  color: white;
-  font-size:medium;
-  border: none;
-}
-
-#add:active {
-  color: black;
-  background:white;
-  border-top: thin solid black;
-  border-right: thin solid black;
-}
-
-#morph-container{
-  display: flex;
-  flex-direction:column;
-  width: 100px;
-}
-
-#signature{
- position: absolute;
- bottom: 0;
- right: 0;
-
- font-size:small;
- cursor: pointer;
-}
-
-#signature a{
- color: black;
-}
-
-#signature a:visited{
- color: black;
-}
-
-#text {
- padding-left: 5px;
-}
-
-#shape, #color, #size {
-  border: solid thin black;
-  height: 100px;
-  width: 100px;
+#contact-page img {
+  height: 50vh;
+  width: 50vh;
+  border-radius: 2000px;
+  filter: grayscale(100%);
   
 }
-
-
-
-#draggable {
- position: absolute;
+/* header */
+#header {
+  text-align: center;
 }
 
-.draggableShape {
- position: absolute;
- height: 50px;
- width: 50px;
- background: pink;
+#header h1{
+  font-weight: normal;
+  margin: 0;
 }
 
-.color {
- background: yellow;
+#header span {
+  color: #b70000;
 }
 
-.shape {
- border-radius: 200px;
+#header #buttons {
+  display: flex;
+
+  border-bottom: solid white 10px;
 }
 
-.size{
- height: 150px;
- width: 150px;
+#header #buttons button {
+  flex: 1;
+  
+  font-size: 2rem;
+  font-family: ShadowHill;
+  text-transform: uppercase;
+
+  background: black;
+  color: white;
 }
 
-@keyframes shape{
-  from {
-    border-radius: 200px;
-    transform: scale(0.95);
-    background: #f0f0f0
-  }
-  to {
-    border-radius: 0px;
-    background: #f0f0f0;
-  }
+#header #buttons button:focus {
+  background: white;
+  color: black;
+  border-bottom: none;
 }
-
-@keyframes color{
-  from {
-    background: #fedbe1;
-  }
-  to {
-    background: #ffff6b;
-  }
-}
-
-@keyframes size{
-  from {
-    transform:scale(1)
-  }
-  to {
-   transform:scale(0.7)
-  }
-}
-
