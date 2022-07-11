@@ -9,11 +9,15 @@ import Contact from "./Components/Contact.jsx"
 class App extends Component{
 	constructor(props){
 		super(props);
-		this.state = {page: "gallery"}
+		this.state = {
+			page: "gallery",
+			children: []
+		}
 	}
 
 	componentDidMount(){
 		console.log("component did mount");
+		fetch("http://localhost:3001/allImages").then((res)=> res.json()).then(data => this.setState({children: data.images}));
 	}
 
 	componentWillUnmount(){
@@ -23,7 +27,7 @@ class App extends Component{
 	renderSwitch(page){
 		switch(page){
 			case 'gallery':
-				return <Gallery />
+				return <Gallery children={this.state.children}/>
 			case 'contact':
 				return <Contact />
 
@@ -34,6 +38,7 @@ class App extends Component{
 	clickHandler(e){
 		console.log(e.target.name, "has been clicked")
 		this.setState({page: e.target.name})
+
 	}
 
 	render(){
