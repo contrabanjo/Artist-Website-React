@@ -63,7 +63,7 @@ html, body {
   text-transform: uppercase;
 
   
-  background: #b70000;
+  background: #8b0000;
   color: white;
 }
 
@@ -98,4 +98,15 @@ html, body {
 
   background: black;
   color: white;
+}
+
+/* manage */
+
+#manage-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.media-manage-container {
+  border: solid yellow;
 }

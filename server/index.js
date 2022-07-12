@@ -31,6 +31,7 @@ app.get('/allMedia', (req, res)=>{
   res.send(JSON.stringify(imageObject));
 })
 
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })

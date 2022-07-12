@@ -6,6 +6,8 @@
   "scripts": {
     "test": "test",
     "start": "npm run build && node server/index.js",
+    "start-dev": "webpack --mode development -w ",
+    "start-server-dev": "nodemon server/index.js",
     "build": "webpack --mode production"
   },
   "repository": {
