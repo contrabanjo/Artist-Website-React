@@ -33,6 +33,11 @@ class App extends Component{
 
 	clickHandler(e){
 		this.setState({page: e.target.name})
+
+	}
+
+	isSelected(page){
+		return this.state.page === page ? 'selected' : null;
 	}
 
 	render(){
@@ -41,8 +46,8 @@ class App extends Component{
 		    <div id="header">
 		    	<h1>D<span>A</span>N GRIMSH<span>A</span>W</h1>
 		    	<div id="buttons">
-		    		<button onClick={(e)=> {this.clickHandler(e)}} name="gallery">GALLERY</button>
-		    		<button onClick={(e)=> {this.clickHandler(e)}} name="contact">CONTACT</button>
+		    		<button className={this.isSelected("gallery")} onClick={(e)=> {this.clickHandler(e)}} name="gallery">GALLERY</button>
+		    		<button className={this.isSelected("contact")} onClick={(e)=> {this.clickHandler(e)}} name="contact">CONTACT</button>
 		    	</div>
 		    </div>
 		 	{this.renderSwitch(this.state.page)}

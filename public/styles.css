@@ -17,7 +17,8 @@ html, body {
 }
 
 /* contact page */
-#contact-page {      
+#contact-page {   
+  margin-top: 50px;
   text-align: center;
   font-family: arial;
   font-variant: small-caps;
@@ -34,6 +35,9 @@ html, body {
 /* header */
 #header {
   text-align: center;
+
+  background: black;
+  color: white;
 }
 
 #header h1{
@@ -58,11 +62,18 @@ html, body {
   font-family: ShadowHill;
   text-transform: uppercase;
 
-  background: black;
+  
+  background: #b70000;
   color: white;
 }
 
-#header #buttons button:focus {
+/* #header #buttons button:focus {
+  background: white;
+  color: black;
+  
+} */
+
+#header #buttons button.selected {
   background: white;
   color: black;
   border-bottom: none;
@@ -74,3 +85,17 @@ html, body {
   width: 100%;
 }
 
+#gallery {
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#gallery button { 
+  font-size: 2rem;
+  font-family: ShadowHill;
+  text-transform: uppercase;
+
+  background: black;
+  color: white;
+}
