@@ -30,6 +30,7 @@ html, body {
   filter: grayscale(100%);
   
 }
+
 /* header */
 #header {
   text-align: center;
@@ -66,3 +67,10 @@ html, body {
   color: black;
   border-bottom: none;
 }
+
+/* gallery */
+
+.media {
+  width: 100%;
+}
+

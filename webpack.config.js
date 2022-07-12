@@ -29,6 +29,9 @@ module.exports = {
 		port: 3000,
 		publicPath: "http://localhost:3000/dist/",
 		//hotOnly: true
+		proxy: {
+			"/allMedia": "http://localhost:3001"
+		}
 	},
 	plugins: [new webpack.HotModuleReplacementPlugin()]
 }

@@ -17,7 +17,7 @@ app.use(express.static("public"))
 
 app.use(cors());
 
-app.get('/allImages', (req, res)=>{
+app.get('/allMedia', (req, res)=>{
   const folder = "public/images";
   const imageObject = {
     images: fs.readdirSync(folder)

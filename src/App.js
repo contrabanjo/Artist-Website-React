@@ -5,6 +5,7 @@ import {hot} from "react-hot-loader";
 import Gallery from "./Components/Gallery.jsx"
 import Contact from "./Components/Contact.jsx"
 
+const server = "http://localhost:3001"
 
 class App extends Component{
 	constructor(props){
@@ -16,12 +17,7 @@ class App extends Component{
 	}
 
 	componentDidMount(){
-		console.log("component did mount");
-		fetch("http://localhost:3001/allImages").then((res)=> res.json()).then(data => this.setState({children: data.images}));
-	}
-
-	componentWillUnmount(){
-		console.log("component will unmount")
+		fetch("/allMedia").then((res)=> res.json()).then(data => this.setState({children: data.images}));
 	}
 
 	renderSwitch(page){
@@ -36,9 +32,7 @@ class App extends Component{
 	}
 
 	clickHandler(e){
-		console.log(e.target.name, "has been clicked")
 		this.setState({page: e.target.name})
-
 	}
 
 	render(){

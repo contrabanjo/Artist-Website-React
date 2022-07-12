@@ -6,8 +6,8 @@ function Gallery(props){
 	getMedia()
 		return (
 		 <div id="gallery">
-		 	{props.children.map((child, index) => <Media key={index} src={"./images/"+ child}/>)}}
-		 	Gallery
+		 	{props.children.map((child, index) => <Media key={index} src={"./images/"+ child}/>)}
+		 	
 		 </div>
 		);
 }
