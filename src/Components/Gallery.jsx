@@ -6,12 +6,12 @@ function Gallery(props){
 		return (
 		 <div id="gallery">
 		 	{props.children.map((child, index) => <Media key={index} src={"./images/"+ child}/>)}
-		 	<button onClick={onClick}>Back To Top</button>
+		 	<button onClick={clickHandler}>Back To Top</button>
 		 </div>
 		);
 }
 
-const onClick = (e)=>{
+const clickHandler = (e)=>{
 	window.scrollTo({
         top: 0,
         behavior: "smooth"

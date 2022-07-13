@@ -2,7 +2,7 @@ import React from "react";
 
 function Media(props){
 		return (
-		 <img className="media" src={props.src}/>
+			<img className="media" src={props.src}/>
 		);
 }
 

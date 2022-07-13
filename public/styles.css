@@ -91,6 +91,10 @@ html, body {
   align-content: center;
 }
 
+#gallery img {
+  border-top: solid white 10px;
+}
+
 #gallery button { 
   font-size: 2rem;
   font-family: ShadowHill;
