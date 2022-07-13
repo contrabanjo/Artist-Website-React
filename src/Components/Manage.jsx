@@ -8,17 +8,13 @@ function Manage(props){
 			<div id="manage-page">
 		        {props.children.map((child, index) => {
 		        	return (
-		        		<Media-Management-Container key={index}>
+		        		<MediaManagementContainer key={index}>
 		        			<Media src={"./images/"+ child}/>
-		        		</Media-Management-Container>
+		        		</MediaManagementContainer>
 		        	)
 		        })}
 	        </div>
 		);
-}
-
-const clickHandler = (e) => {
-
 }
 
 export default Manage;

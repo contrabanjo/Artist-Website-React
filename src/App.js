@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {hot} from "react-hot-loader";
+
 
 
 import Gallery from "./Components/Gallery.jsx"
@@ -10,7 +10,7 @@ class App extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			page: "gallery",
+			page: "manage",
 			children: []
 		}
 	}
@@ -33,9 +33,7 @@ class App extends Component{
 	}
 
 	clickHandler(e){
-		console.log(e.target.title)
 		this.setState({page: e.target.title})
-
 	}
 
 	isSelected(page){
@@ -58,4 +56,4 @@ class App extends Component{
 	}
 }
 
-export default hot(module)(App);
+export default App;
