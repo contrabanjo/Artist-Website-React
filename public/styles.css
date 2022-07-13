@@ -105,8 +105,10 @@ html, body {
 #manage-page {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  font-family: arial;
 }
 
 .media-manage-container {
-  border: solid yellow;
+  border: solid black;
 }
